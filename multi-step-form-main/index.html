@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="/cards.js" defer></script>
+    <script type="module" src="/main.js" defer></script>
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar start -->
+      <aside>
+        <div class="steps">
+          <ul>
+            <li>
+              <span class="circle active">
+                <span>1</span>
+              </span>
+              <div class="label">Step 1</div>
+              <div class="labelContent">Your info</div>
+            </li>
+            <li>
+              <span class="circle">
+                <span>2</span>
+              </span>
+              <div class="label">Step 2</div>
+              <div class="labelContent">Select plan</div>
+            </li>
+            <li>
+              <span class="circle">
+                <span>3</span>
+              </span>
+              <div class="label">Step 3</div>
+              <div class="labelContent">Add-ons</div>
+            </li>
+            <li>
+              <span class="circle">
+                <span>4</span>
+              </span>
+              <div class="label">Step 4</div>
+              <div class="labelContent">Summary</div>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Sidebar end -->
+      <div class="main">
+        <form id="form" action="">
+          <!-- Step 1 start -->
+          <section id="card" class="card">
+            <h1>Personal info</h1>
+            <p>Please provide your name, email address, and phone number.</p>
+            <div class="formField">
+              <label for="username">Name <small></small> </label>
+              <input
+                type="text"
+                name="name"
+                id="username"
+                autocomplete="off"
+                placeholder="e.g. Stephen King"
+              />
+            </div>
+            <div class="formField">
+              <label for="email">Email Address <small></small></label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="off"
+                placeholder="e.g. stephenking@lorem.com"
+              />
+            </div>
+            <div class="formField">
+              <label for="number">Phone Number <small></small></label>
+              <input
+                type="text"
+                name="number"
+                id="number"
+                autocomplete="off"
+                placeholder="e.g. +1 234 567 890"
+              />
+            </div>
+            <button type="button" class="next" data-next>Next Step</button>
+          </section>
+          <!-- Step 1 end -->
+
+          <!-- Step 2 start -->
+          <section id="card" class="card">
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+            <article class="planArticle"></article>
+            <div class="myPlan">
+              <span class="payPer">Monthly</span>
+              <label class="switch">
+                <input type="checkbox" />
+                <span class="slider round"></span>
+              </label>
+              <span class="payPer">Yearly</span>
+            </div>
+            <button type="button" class="back" data-back>Go Back</button>
+            <button type="button" class="next" data-next>Next Step</button>
+          </section>
+          <!-- Step 2 end -->
+
+          <!-- Step 3 start -->
+          <section id="card" class="card">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+            <article class="addArticle"></article>
+            <button type="button" class="back" data-back>Go Back</button>
+            <button type="button" class="next" data-next>Next Step</button>
+          </section>
+          <!-- Step 3 end -->
+
+          <!-- Step 4 start -->
+          <section id="card" class="card">
+            <h1>Finishing up</h1>
+            <p>Double-check everything looks OK before confirming.</p>
+            <!-- Dynamically add subscription and add-on selections here -->
+            <div class="total">
+              <div class="monthOrYear">
+                <div class="cardName">Arcade(Monthly)</div>
+                <div class="amount">$9/mo</div>
+                <a href="#" class="change">Change</a>
+              </div>
+              <div class="line"></div>
+              <div class="summaryCard"></div>
+            </div>
+            <div class="payment">
+              <p class="onTotal">Total (per month)</p>
+              <span class="rate">+$00/mo</span>
+            </div>
+            <button type="button" class="back" data-back>Go Back</button>
+            <button type="button" class="confirm" data-next>Confirm</button>
+          </section>
+          <!-- Step 4 end -->
+
+          <!-- Step 5 start -->
+          <section id="card" class="card">
+            <div class="thank">
+              <img
+                src="/assets/images/icon-thank-you.svg"
+                alt=""
+                class="image"
+              />
+              <h1>Thank you!</h1>
+              <p>
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.
+              </p>
+            </div>
+          </section>
+          <!-- Step 5 end -->
+        </form>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/cutecoder96" target="_blank"
+        >cutecoder96(Mahveen)</a
+      >.
+    </div>
+  </body>
+</html>
